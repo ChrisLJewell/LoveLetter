@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Love Story</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #f8f5f8;
+      color: #333;
+      line-height: 1.6;
+      text-align: center;
+      padding: 1rem;
+    }
+    h1, h2 {
+      color: #b30059;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .section {
+      margin: 2rem 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .heart {
+      position: fixed;
+      font-size: 1.5rem;
+      animation: floatUp 3s linear forwards;
+      color: #ff3366;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+    p.tap-note {
+      margin-top: 2rem;
+      font-weight: bold;
+      color: #b30059;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Love Story</h1>
+  <p>From the moment we met, every step brought us closer to forever.</p>
+
+  <div class="section">
+    <h2>Where It All Began</h2>
+    <img src="photo1.jpg" alt="Us at the start" />   <!-- Photo Carousel -->
+        <p>
+    We first met on Hinge (I knew you were my type the moment you placed your graduation tassel on the other side),  
+    talked on FaceTime (I didn’t want the call to end), and finally met in person at <b>Rising Phoenix Archery</b>.<br><br>  
+    Before all those moments, I asked our Heavenly Father to give me the wife he wants me to have and make it clear as day! 
+    He gave me His daughter—an amazing woman who has been more than I could ever ask for from the very start, The Love of my Life.
+</p>
+</div>
+
+
+
+  <div class="section">
+    <h2>The Proposal</h2>
+    <img src="photo2.jpg" alt="Proposal moment" />
+  <p>
+    On 7/12/2025, I asked you to marry me. It was, hands down, the greatest thing I’ve ever done in my life.<br>
+    I remember how we used to get so much reassurance from complete strangers—like that one guy who suggested I propose without a ring  &#128514; —all leading up to this moment.
+</p>
+
+  
+  
+  
+
+
+    
+  </div>
+
+  <div class="section">
+    <h2>Our Forever Starts Now</h2>
+    <img src="photo3.jpg" alt="Wedding moment" />
+    <p>
+    As we say “I do,” I promise to love you every day for the rest of my life—to cherish you and hold you always.
+</p>
+
+  </div>
+
+
+
+  <script>
+    // Floating hearts on tap
+    document.body.addEventListener('click', function(e) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = e.clientX + 'px';
+      heart.style.top = e.clientY + 'px';
+      heart.innerHTML = '❤️';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 3000);
+    });
+
+    // Scroll-reveal for sections
+    const sections = document.querySelectorAll('.section');
+    const revealSection = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if(top < triggerBottom) {
+          section.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealSection);
+    // Trigger on load
+    revealSection();
+  </script>
+
+</body>
+</html>
