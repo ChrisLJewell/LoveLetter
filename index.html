@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background: #f8f5f8;
+      background: #ebe2eb;
       color: #333;
       line-height: 1.6;
       text-align: center;
@@ -43,60 +43,180 @@
       0% { transform: translateY(0); opacity: 1; }
       100% { transform: translateY(-100vh); opacity: 0; }
     }
-    p.tap-note {
-      margin-top: 2rem;
-      font-weight: bold;
-      color: #b30059;
+
+    /* Generic Carousel */
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .display-panel {
+      width: 100%;         
+        max-width: 500px;   
+        height: auto;       
+        overflow: hidden;
+    }
+
+    .image-list {
+      position: relative;
+      width: 9999px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      transition: left 0.5s ease;
+      left: 0;
+    }
+
+    .image-list li {
+      width: 300px;
+      flex: none;
+    }
+
+    
+    .image-list img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;   /* fills box, crops overflow */
+  border-radius: 10px;
+}
+
+    
+    
+    
+    
+
+    .carousel-button {
+      width: 40px;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+    }
+
+    .carousel-button img {
+      width: 100%;
+      border-radius: 90px;
+    }
+
+   
+    
+    
+    
+
+    /* Hidden story reveal */
+    .story-text {
+      display: none;
+      margin-top: 1rem;
+      color: #333;
+      font-size: 1rem;
+    }
+    .reveal-btn {
+      background: #b30059;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .reveal-btn:hover {
+      background: #ff3385;
     }
   </style>
 </head>
 <body>
 
-  <h1>Our Love Story</h1>
-  <p>From the moment we met, every step brought us closer to forever.</p>
+  <h1>Our Love Story</h1> 
+  <p> <quote>  He who finds a wife finds what is good and receives favor from the Lord. <br> - Proverbs 18:22 </quote></p>
 
+  <!-- Section 1 -->
   <div class="section">
     <h2>Where It All Began</h2>
-    <img src="photo1.jpg" alt="Us at the start" />   <!-- Photo Carousel -->
-        <p>
-    We first met on Hinge (I knew you were my type the moment you placed your graduation tassel on the other side),  
-    talked on FaceTime (I didn’t want the call to end), and finally met in person at <b>Rising Phoenix Archery</b>.<br><br>  
-    Before all those moments, I asked our Heavenly Father to give me the wife he wants me to have and make it clear as day! 
-    He gave me His daughter—an amazing woman who has been more than I could ever ask for from the very start, The Love of my Life.
-</p>
-</div>
+    <div class="carousel">
+      <div class="carousel-button left"><img src="1.png" alt="Prev" /></div>
+      <div class="display-panel"> 
+        <ul class="image-list">
+          <li><img src="firstPic.JPG" alt="Our first meeting" /></li>
+          <li><img src="firstDate.JPG" alt="Proposal moment" /></li>
+          <li><img src="ily_vegas.JPG" alt="Love" /></li>
+          <li><img src="soulmate.JPG" alt="Love" /></li>
+          <li><img src="injuryLove.JPG" alt="Love" /></li>
+          <li><img src="top_golf.JPG" alt="Love" /></li>
+        </ul>
+      </div>
+      <div class="carousel-button right"><img src="2.png" alt="Next" /></div>
+    </div>
+    <button class="reveal-btn">Reveal Story</button>
+    <p class="story-text">
+     You might be wondering why my husband chose these pictures without my approval… 😂
+Or maybe you’re just smiling—let’s go with that. From the very beginning, I knew you were my wife, my best friend, and my soulmate. 
+These pictures capture the love, playfulness, and nurturing bond we’ve shared from the start. I love you so much.
+     
+     
+     
+      
+      
+    </p>
+  </div>
 
-
-
+  <!-- Section 2 -->
   <div class="section">
     <h2>The Proposal</h2>
-    <img src="photo2.jpg" alt="Proposal moment" />
-  <p>
-    On 7/12/2025, I asked you to marry me. It was, hands down, the greatest thing I’ve ever done in my life.<br>
-    I remember how we used to get so much reassurance from complete strangers—like that one guy who suggested I propose without a ring  &#128514; —all leading up to this moment.
-</p>
+    <div class="carousel">
+      <div class="carousel-button left"><img src="1.png" alt="Prev" /></div>
+      <div class="display-panel"> 
+        <ul class="image-list">
+          <li><img src="proposal.JPG" alt="Proposal moment" /></li>
+          <li><img src="newyork_love.jpg" alt="" /></li>
+          <li><img src="bunny.jpg" alt="" /></li>
+          <li><img src="prettyLady.JPG" alt="" /></li>
+          <li><img src="illusion.jpg" alt="" /></li>
+          <li><img src="ladyDance.JPG" alt="" /></li>
 
-  
-  
-  
 
-
-    
+        </ul>
+      </div>
+      <div class="carousel-button right"><img src="2.png" alt="Next" /></div>
+    </div>
+    <button class="reveal-btn">Reveal Story</button>
+    <p class="story-text">
+      On 7/12/2025, I asked you to marry me—and hands down, it was the greatest thing I’ve ever done in my life.
+I remember how strangers used to reassure us, like that one guy who suggested I propose without a ring 😂. 
+ The smile on your face brings me so much happiness—especially in that last picture. 
+I love you an infinity loop (endless) amount of times.
+      
+      
+    </p>
   </div>
 
+  <!-- Section 3 -->
   <div class="section">
     <h2>Our Forever Starts Now</h2>
-    <img src="photo3.jpg" alt="Wedding moment" />
-    <p>
-    As we say “I do,” I promise to love you every day for the rest of my life—to cherish you and hold you always.
-</p>
-
+    <div class="carousel">
+      <div class="carousel-button left"><img src="1.png" alt="Prev" /></div>
+      <div class="display-panel"> 
+        <ul class="image-list">
+          <li><img src="photo3.jpg" alt="Wedding moment" /></li>
+          <li><img src="wedding-extra.jpg" alt="Another wedding shot" /></li>
+        </ul>
+      </div>
+      <div class="carousel-button right"><img src="2.png" alt="Next" /></div>
+    </div>
+    <button class="reveal-btn">Reveal Story</button>
+    <p class="story-text">
+      As we say “I do,” I promise to love you every day for the rest of my life—to cherish you and hold you always.
+    </p>
   </div>
 
-
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    // Floating hearts on tap
+    // Floating hearts
     document.body.addEventListener('click', function(e) {
       const heart = document.createElement('div');
       heart.classList.add('heart');
@@ -107,21 +227,279 @@
       setTimeout(() => heart.remove(), 3000);
     });
 
-    // Scroll-reveal for sections
+    // Scroll reveal
     const sections = document.querySelectorAll('.section');
     const revealSection = () => {
       const triggerBottom = window.innerHeight * 0.85;
       sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        if(top < triggerBottom) {
+        if(section.getBoundingClientRect().top < triggerBottom) {
           section.classList.add('visible');
         }
       });
     };
     window.addEventListener('scroll', revealSection);
-    // Trigger on load
     revealSection();
-  </script>
 
+    // Reusable Carousel
+    $(document).ready(() => {
+      $(".carousel").each(function() {
+        const carousel = $(this);
+        const slider = carousel.find(".image-list");
+        const imageWidth = 300;
+        const totalImages = carousel.find("li").length;
+        let currentIndex = 0;
+
+        carousel.find(".right").click(() => {
+          if (currentIndex < totalImages - 1) {
+            currentIndex++;
+            slider.animate({ left: -(imageWidth * currentIndex) }, 500);
+          }
+        });
+
+        carousel.find(".left").click(() => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            slider.animate({ left: -(imageWidth * currentIndex) }, 500);
+          }
+        });
+      });
+
+      // Reveal story toggle
+      $(".reveal-btn").click(function() {
+        const story = $(this).next(".story-text");
+        story.slideToggle(500);
+        $(this).text(story.is(":visible") ? "❤️" : "❤️");
+      });
+    });
+  </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
